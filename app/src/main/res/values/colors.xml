@@ -2,6 +2,7 @@
 <resources>
     <color name="secondary_blue">#6883BA</color>
     <color name="green_tea">#CAFFBF</color>
+    <color name="green_tea_56">#8FCAFFBF</color>
     <color name="floral_white">#FFFDF7</color>
     <color name="light_brown">#7C766B</color>
     <color name="dark_brown">#574C39</color>

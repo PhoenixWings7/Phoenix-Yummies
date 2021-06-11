@@ -2,4 +2,7 @@
 <resources>
     <dimen name="default_padding">8dp</dimen>
     <dimen name="layout_padding">16dp</dimen>
+    <dimen name="recycler_view_corner_radius">30dp</dimen>
+    <dimen name="headline_text_size">24sp</dimen>
+    <dimen name="details_text_size">20sp</dimen>
 </resources>
