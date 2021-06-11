@@ -24,7 +24,7 @@
             android:minEms="6"
             android:minLines="1"
             android:maxLines="1"
-            android:textSize="24sp"
+            android:textSize="@dimen/headline_text_size"
             android:hint="@string/search"
             android:inputType="text"
             android:backgroundTint="@color/invisible">
@@ -37,5 +37,13 @@
             android:background="@color/invisible"
             android:contentDescription="@string/search" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:background="@drawable/recycler_view_background"
+        android:layout_weight="1"
+        android:padding="@dimen/layout_padding"/>
 
 </LinearLayout>
