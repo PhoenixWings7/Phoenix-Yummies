@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FilterLabel">
+        <item name="android:textSize">@dimen/label_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_brown</item>
+        <item name="android:layout_marginBottom">@dimen/default_padding</item>
+        <item name="android:layout_marginTop">@dimen/default_padding</item>
+    </style>
+
+    <style name="ThemedFilterGroup">
+        <item name="flexWrap">wrap</item>
+        <item name="toggle_horizontalSpacing">@dimen/spacing_btwn_filter_btns</item>
+        <item name="toggle_selectAnimation">circular_reveal</item>
+    </style>
+
+    <style name="FilterButton">
+        <item name="android:layout_marginBottom">@dimen/default_padding</item>
+        <item name="toggle_textSize">@dimen/filter_btn_text_size</item>
+        <item name="toggle_textColor">@color/light_brown</item>
+        <item name="toggle_selectedTextColor">@color/white</item>
+        <item name="toggle_borderColor">@color/secondary_blue</item>
+        <item name="toggle_borderWidth">@dimen/filter_btn_border_width</item>
+        <item name="toggle_selectedBorderColor"> @color/secondary_blue</item>
+        <item name="toggle_backgroundColor">@color/white</item>
+        <item name="toggle_selectedBackgroundColor">@color/secondary_blue</item>
+        <item name="toggle_padding">@dimen/default_padding</item>
+    </style>
+</resources>
