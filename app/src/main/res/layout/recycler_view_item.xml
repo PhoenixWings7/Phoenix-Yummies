@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/recycler_view_item_bg"
-    android:padding="@dimen/layout_padding">
+    android:padding="@dimen/layout_padding"
+    android:layout_marginBottom="@dimen/layout_padding">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
