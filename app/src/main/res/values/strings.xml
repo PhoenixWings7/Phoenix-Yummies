@@ -3,4 +3,18 @@
     <string name="search">Search</string>
     <string name="default_dish_title">Your dish title goes here.</string>
     <string name="default_dish_sum_up">Your dish\'s sum-up goes here.</string>
+    <string name="previous_search">Previous search</string>
+    <string name="previous_search_item_default_text">Previous search item</string>
+    <string name="ranking">Ranking</string>
+    <string name="max_used_ingredients">max used ingredients</string>
+    <string name="min_missing_ingredients">min missing ingredients</string>
+    <string name="ten">10</string>
+    <string name="twenty">20</string>
+    <string name="max_recipes_returned">Max recipes returned</string>
+    <string name="forty">40</string>
+    <string name="fifty">50</string>
+    <string name="thirty">30</string>
+    <string name="hundred">100</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="add_ingredient">Add ingredient</string>
 </resources>
