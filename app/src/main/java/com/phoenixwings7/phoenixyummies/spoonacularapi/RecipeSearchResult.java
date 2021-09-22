@@ -5,26 +5,13 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipeSearchResult {
-    private long id;
-    private String title;
-    private String image;
+public class RecipeSearchResult extends Recipe {
+
     @SerializedName("missedIngredients")
-    private final List<Ingredient> additionalIngredients = new ArrayList<Ingredient>();
+    private List<Ingredient> additionalIngredients = new ArrayList<>();
+
     @SerializedName("usedIngredients")
-    private final List<Ingredient> queriedIngredients = new ArrayList<Ingredient>();
-
-    public long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getImage() {
-        return image;
-    }
+    private List<Ingredient> queriedIngredients = new ArrayList<>();
 
     public List<Ingredient> getAdditionalIngredients() {
         return additionalIngredients;
@@ -34,4 +21,11 @@ public class RecipeSearchResult {
         return queriedIngredients;
     }
 
+    public void setAdditionalIngredients(List<Ingredient> additionalIngredients) {
+        this.additionalIngredients = additionalIngredients;
+    }
+
+    public void setQueriedIngredients(List<Ingredient> queriedIngredients) {
+        this.queriedIngredients = queriedIngredients;
+    }
 }
