@@ -1,46 +1,39 @@
 package com.phoenixwings7.phoenixyummies.spoonacularapi;
 
-import java.io.IOException;
-
 import okhttp3.HttpUrl;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RecipeApi {
-    public RecipeApiService getRecipeApi() {
+    public static RecipeApiService getRecipeApi() {
         OkHttpClient okHttpClient = getClientWithApiKey();
         Retrofit retrofitBuilder = new Retrofit.Builder()
                 .baseUrl(RecipeApiService.baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.createAsync())
                 .client(okHttpClient)
                 .build();
 
-        RecipeApiService recipeApiService = retrofitBuilder.create(RecipeApiService.class);
-
-        return recipeApiService;
+        return retrofitBuilder.create(RecipeApiService.class);
     }
 
-    private OkHttpClient getClientWithApiKey() {
+    private static OkHttpClient getClientWithApiKey() {
         return new OkHttpClient().newBuilder()
-                .addInterceptor(new Interceptor() {
-                    @Override
-                    public Response intercept(Chain chain) throws IOException {
-                        Request originalRequest = chain.request();
+                .addInterceptor(chain -> {
+                    Request originalRequest = chain.request();
 
-                        HttpUrl urlWithApiKey = originalRequest.url().newBuilder()
-                                .addQueryParameter("apiKey", RecipeApiService.API_KEY)
-                                .build();
+                    HttpUrl urlWithApiKey = originalRequest.url().newBuilder()
+                            .addQueryParameter("apiKey", RecipeApiService.API_KEY)
+                            .build();
 
-                        Request requestWithApiKey = originalRequest.newBuilder()
-                                .url(urlWithApiKey)
-                                .build();
+                    Request requestWithApiKey = originalRequest.newBuilder()
+                            .url(urlWithApiKey)
+                            .build();
 
-                        return chain.proceed(requestWithApiKey);
-                    }
+                    return chain.proceed(requestWithApiKey);
                 }).build();
     }
 }
