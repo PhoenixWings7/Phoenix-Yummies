@@ -1,7 +1,5 @@
 package com.phoenixwings7.phoenixyummies.spoonacularapi;
 
-import androidx.room.Ignore;
-
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -14,7 +12,6 @@ public class RecipeInstructionPart {
     private String title;
 
     @SerializedName("steps")
-    @Ignore
     private List<InstructionStep> instructionSteps;
 
     public String getTitle() {
@@ -23,5 +20,13 @@ public class RecipeInstructionPart {
 
     public List<InstructionStep> getInstructionSteps() {
         return instructionSteps;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setInstructionSteps(List<InstructionStep> instructionSteps) {
+        this.instructionSteps = instructionSteps;
     }
 }

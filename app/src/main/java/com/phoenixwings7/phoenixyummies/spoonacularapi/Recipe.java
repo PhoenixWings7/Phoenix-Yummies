@@ -1,18 +1,12 @@
 package com.phoenixwings7.phoenixyummies.spoonacularapi;
 
-import androidx.room.ColumnInfo;
-
-import com.google.gson.annotations.SerializedName;
-
 public class Recipe {
-    @SerializedName("id")
-    @ColumnInfo(name = "spooncular_id")
-    private long recipeId;
+    private long id;
     private String title;
     private String image;
 
-    public long getRecipeId() {
-        return recipeId;
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -21,5 +15,17 @@ public class Recipe {
 
     public String getImage() {
         return image;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
